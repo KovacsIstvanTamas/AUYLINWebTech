@@ -23,3 +23,8 @@
 .desc_list{
     color: turquoise;
 }
+
+.kep{
+    float: left; 
+    margin: 10px;
+}
