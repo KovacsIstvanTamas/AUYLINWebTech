@@ -7,3 +7,12 @@ table, th, td, tr {
   width: 100%;
 }
 
+.box
+{
+  background-color: cyan;
+  border-radius: 5%;
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  box-shadow: 5px 5px 10px #888888; 
+}
