@@ -1,0 +1,25 @@
+<!Doctype HTML>
+
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>JSON Text konvertálása JavaScript objektummá!</title>
+        
+    </head>
+
+    <body>
+
+
+        <h2>JS objektumot konvertálja JSON Text.</h2>
+
+        <p id="demo"></p>
+
+        <script>
+            const obj2 = {name: "John", age: 30, city: "New York"};
+            const myJSON = JSON.stringify(obj2);
+            document.getElementById("demo").innerHTML = myJSON;
+        </script>
+    </body>
+
+</html>
