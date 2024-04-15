@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolat</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Online Receptgyűjtemény</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="receptek.html">Receptek</a></li>
+                <li><a href="kapcsolat.html">Kapcsolat</a></li>
+                <li><a href="videok.html">Video</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Kapcsolat</h2>
+        <p>Ha kérdése, javaslata vagy észrevétele van, kérjük, vegye fel velünk a kapcsolatot az alábbi űrlapon keresztül:</p>
+        <form id="contact-form">
+            <label for="name">Név:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email cím:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Üzenet:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Küldés</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Online Receptgyűjtemény</p>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>
