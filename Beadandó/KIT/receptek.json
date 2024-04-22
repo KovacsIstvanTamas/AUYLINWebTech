@@ -17,5 +17,49 @@
             "Sózza és borsozza ízlés szerint.",
             "Frissen tálalva azonnal fogyasztandó."
         ]
+    },
+    {
+        "nev": "Lasagne",
+        "hozzavalok": [
+            "500 g darált marhahús",
+            "1 doboz darált paradicsom",
+            "Lasagne tészta",
+            "250 g ricotta sajt",
+            "250 g mozzarella sajt",
+            "100 g reszelt parmezán sajt",
+            "1 hagyma",
+            "2 gerezd fokhagyma",
+            "Oregánó, bazsalikom, só, bors ízlés szerint"
+        ],
+        "elkeszites": [
+            "Forrósítsa fel az olajat egy serpenyőben, majd süssön meg rajta a felaprított hagymát és fokhagymát.",
+            "Adjuk hozzá a darált marhahúst és pirítsuk meg, amíg kifehéredik.",
+            "Öntsük hozzá a darált paradicsomot, és főzzük még 10 percig.",
+            "Fűszerezzük ízlés szerint oregánóval, bazsalikommal, sóval és borssal.",
+            "Az aljára tegyünk egy réteg lasagne tésztát, majd egy réteg húsos szószt, ricotta és mozzarella sajtot.",
+            "Ismételjük meg a rétegezést, majd a tetejére szórjuk rá a reszelt parmezán sajtot.",
+            "Süssük 180 fokon 30-40 percig, amíg a tészta megpuhul és a teteje aranybarna lesz."
+        ]
+    },
+    {
+        "nev": "Tiramisu",
+        "hozzavalok": [
+            "500 g mascarpone sajt",
+            "3 tojás",
+            "100 g porcukor",
+            "200 ml erős kávé",
+            "30 ml konyak vagy rum",
+            "300 g babapiskóta",
+            "Kakaópor a tetejére"
+        ],
+        "elkeszites": [
+            "Keverjük össze a mascarpone sajtot és a tojássárgákat a porcukorral, amíg sima krémet kapunk.",
+            "A tojásfehérjéket verjük habbá, majd óvatosan keverjük hozzájuk a mascarpone krémhez.",
+            "Keverjük össze a kávét a konyakkal vagy rummal egy tálban.",
+            "Áztassuk meg a babapiskótákat a kávéban, majd helyezzük egy rétegben egy tál aljára.",
+            "Készítsünk egy réteg mascarpone krémet a babapiskótára.",
+            "Ismételjük meg a rétegezést, majd tegyük a hűtőbe legalább 4 órára, de még jobb, ha egy éjszakára, hogy jól összeérjenek az ízek.",
+            "Tálalás előtt szórjuk meg kakaóporral."
+        ]
     }
 ]
