@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $('#rating-form').submit(function(event) {
-        // Ellenőrizze a megjegyzés mezőt
         var megjegyzes = $('#megjegyzes').val();
         var maxChars = 1000;
         var regex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
@@ -32,15 +31,15 @@ function validateTextarea(textarea) {
 
     if (text.length > maxChars) {
         errorDiv.textContent = 'A megjegyzés maximum 1000 karakter lehet';
-        textarea.classList.add('is-invalid'); // hozzáadja az 'is-invalid' osztályt
+        textarea.classList.add('is-invalid');
     } else {
         errorDiv.textContent = '';
-        textarea.classList.remove('is-invalid'); // eltávolítja az 'is-invalid' osztályt
+        textarea.classList.remove('is-invalid');
     }
 
     var regex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
     if (regex.test(text)) {
         errorDiv.textContent = 'A megjegyzés nem tartalmazhat speciális karaktereket';
-        textarea.classList.add('is-invalid'); // hozzáadja az 'is-invalid' osztályt
+        textarea.classList.add('is-invalid');
     }
 }
