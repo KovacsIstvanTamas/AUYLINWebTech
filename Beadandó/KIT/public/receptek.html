@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receptek</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .sidenav {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            z-index: 1;
+            right: 0;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        .sidenav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+        }
+
+        .sidenav a:hover {
+            background-color: #ddd;
+        }
+
+        .radio-item input[type="radio"] {
+        margin-right: 5px;
+        }
+
+        .radio-item label {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Receptgyűjtemény</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="receptek.html">Receptek</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sidenav">
+        <h5>Kategóriák</h5>
+        <div class="radio-item">
+            <input type="radio" name="category" value="osszes" onchange="filterCards(this.value)" checked>
+            <label for="osszes">Összes</label>
+        </div>
+        <div class="radio-item">
+            <input type="radio" name="category" value="Tészta" onchange="filterCards(this.value)">
+            <label>Tészta</label>
+        </div>
+        <div class="radio-item">
+            <input type="radio" name="category" value="Pizza" onchange="filterCards(this.value)">
+            <label>Pizza</label>
+        </div>
+        <div class="radio-item">
+            <input type="radio" name="category" value="Édesség" onchange="filterCards(this.value)">
+            <label>Édesség</label>
+        </div>
+        <div class="radio-item">
+            <input type="radio" name="category" value="Saláták" onchange="filterCards(this.value)">
+            <label>Saláták</label>
+        </div>
+        <div class="radio-item">
+            <input type="radio" name="category" value="Görög-konyha" onchange="filterCards(this.value)">
+            <label>Görög konyha</label>
+        </div>
+        <div class="radio-item">
+            <input type="radio" name="category" value="Burger" onchange="filterCards(this.value)">
+            <label>Burger</label>
+        </div>
+        <div class="radio-item">
+            <input type="radio" name="category" value="Ázsiai-konyha" onchange="filterCards(this.value)">
+            <label>Ázsiai-konyha</label>
+        </div>
+    </div>
+    
+    <section class="container">
+        <h2>Receptek</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" id="Saláták">
+                <div class="card">
+                    <div class="card-header" style="background-image: url('képek/caprese.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body" >
+                        <h5 class="card-title">Paradicsomos Caprese Saláta</h5>
+                        <p class="card-text">Ez egy ízletes és könnyű olasz saláta, amely paradicsom, mozzarella és bazsalikom alapanyagokból készül.</p>
+                        <a href="recept.html?etel=caprese" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=caprese" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=caprese" class="btn btn-primary">Videó</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="Tészta">
+                <div class="card">
+                <div class="card-header" style="background-image: url('képek/lasagne.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Lasagne</h5>
+                        <p class="card-text">A klasszikus olasz lasagne receptje, amelyben a rétegek közé rakott szósz, tészta és sajt fantasztikus ízeket alkotnak.</p>
+                        <a href="recept.html?etel=Lasagne" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=Lasagne" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=Lasagne" class="btn btn-primary">Videó</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="Édesség">
+                <div class="card">
+                    <div class="card-header" style="background-image: url('képek/tiramisu.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Tiramisu</h5>
+                        <p class="card-text">A hagyományos olasz tiramisu receptje, amelyben a puha mascarpone krém és a kávéban áztatott piskóta rétegek egy ízorgia.</p>
+                        <a href="recept.html?etel=Tiramisu" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=Tiramisu" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=Tiramisu" class="btn btn-primary">Videó</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="Tészta">
+                <div class="card">
+                    <div class="card-header" style="background-image: url('képek/sugo.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Spagetti Sugo</h5>
+                        <p class="card-text">Egy könnyű és ízletes paradicsom alapú spagetti szósz, amelyet friss zöldségekkel és fűszerekkel készítenek.</p>
+                        <a href="recept.html?etel=Sugo" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=Sugo" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=Sugo" class="btn btn-primary">Videó</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="Pizza">
+                <div class="card">
+                    <div class="card-header" style="background-image: url('képek/pizza.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza</h5>
+                        <p class="card-text">Az olasz konyha egyik legnépszerűbb fogása, melynek alapja a vékony tészta, paradicsomszósz és gazdag feltétek.</p>
+                        <a href="recept.html?etel=Pizza" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=Pizza" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=Pizza" class="btn btn-primary">Videó</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="Görög-konyha">
+                <div class="card">
+                    <div class="card-header" style="background-image: url('képek/gyros.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Gyros</h5>
+                        <p class="card-text">Görög gyorsétel, melyet gyakran pita kenyérbe töltve, friss zöldségekkel és tzatziki mártással tálalnak.</p>
+                        <a href="recept.html?etel=Gyros" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=Gyros" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=Gyros" class="btn btn-primary">Videó</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" id="Burger">
+                <div class="card">
+                    <div class="card-header" style="background-image: url('képek/burger.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Burger</h5>
+                        <p class="card-text">A klasszikus hamburger, amelyet szaftos húspogácsával, friss zöldségekkel és sajttal tálalnak.</p>
+                        <a href="recept.html?etel=Burger" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=Burger" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=Burger" class="btn btn-primary">Videó</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="Ázsiai-konyha">
+                <div class="card">
+                    <div class="card-header" style="background-image: url('képek/pad_thai.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pad Thai</h5>
+                        <p class="card-text">A thai konyha egyik legnépszerűbb fogása, melyet rizstésztából, sült tofuval, rákokkal, földimogyoróval és friss zöldségekkel készítenek.</p>
+                        <a href="recept.html?etel=PadThai" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=PadThai" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=PadThai" class="btn btn-primary">Videó</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4" id="Ázsiai-konyha">
+                <div class="card">
+                    <div class="card-header" style="background-image: url('képek/sushi.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Sushi</h5>
+                        <p class="card-text">A japán konyha híres fogása, melyet sushi rizsből és különböző halakból készítenek, gyakran társul hozzá szójaöntet és wasabi.</p>
+                        <a href="recept.html?etel=Sushi" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=Sushi" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=Sushi" class="btn btn-primary">Videó</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4" id="Tészta">
+                <div class="card">
+                    <div class="card-header" style="background-image: url('képek/puttanesca.jpg'); background-size: cover; height: 200px;"></div>
+                    <div class="card-body">
+                        <h5 class="card-title">Spaghetti alla Puttanesca</h5>
+                        <p class="card-text">Forralj bővizet egy nagy lábasban, és főzd meg a spagettit a csomagoláson található útmutató szerint. Melegíts olívaolajat egy serpenyőben közepes lángon, majd adj hozzá apróra vágott fokhagymát, sózott heringet, olajbogyót és kapribogyót. Párold őket egy-két percig. Adj hozzá apróra vágott cseresznye paradicsomot, majd főzd még további 2-3 percig. Szórj rá frissen őrölt vörös borsot és apróra vágott petrezselymet. Öntsd le a lecsöpögtetett spagettit a serpenyőbe, majd forgasd össze a szósszal. Tálald melegen, esetleg frissen reszelt parmezánnal megszórva.</p>
+                        <a href="recept.html?etel=puttanesca" class="btn btn-primary">Részletek</a>
+                        <a href="rate.html?etel=puttanesca" class="btn btn-primary">Értékelés</a>
+                        <a href="videok.html?etel=puttanesca" class="btn btn-primary">Videók</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Online Receptgyűjtemény</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".card").mouseenter(function(){
+                $(this).css("transform", "translateY(-10px)");
+            });
+            $(".card").mouseleave(function(){
+                $(this).css("transform", "translateY(0)");
+            });
+        });
+
+        function filterCards(category) {
+            var cards = document.getElementsByClassName('col-md-4 mb-4');
+            for (var i = 0; i < cards.length; i++) {
+                if(category.toLowerCase() == "osszes"){
+                    cards[i].style.display = 'block';
+                }
+                else{
+                    if (cards[i].id.toLowerCase().includes(category.toLowerCase())) {
+                    cards[i].style.display = 'block';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
