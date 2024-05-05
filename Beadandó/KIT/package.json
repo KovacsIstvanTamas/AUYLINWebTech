@@ -1,7 +1,7 @@
 {
   "name": "E-Recept",
   "version": "1.0.0",
-  "description": "Projekt leírása",
+  "description": "Ez egy E-Recept weboldad",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
