@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUYLIN_4</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="AUYLIN_4.js" defer></script>
+    <style>
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p><b>Adjon meg két egész számot</b></p>
+    <form id="calculator">
+
+        <label for="num1">A=</label>
+        <input type="number" id="num1" name="num1" required style="background-color: aqua;">
+        <br><br>
+
+        <label for="num2">B=</label>
+        <input type="number" id="num2" name="num2" required style="background-color: aqua;">
+        <br><br>
+
+        <label>Operátor:</label><br>
+
+        <input type="radio" id="add" name="operator" value="add" required>
+        <label for="add">A+B</label><br>
+
+        <input type="radio" id="subtract" name="operator" value="subtract">
+        <label for="subtract">A-B</label><br>
+
+        <input type="radio" id="multiply" name="operator" value="multiply">
+        <label for="multiply">A*B</label><br>
+
+        <input type="radio" id="divide" name="operator" value="divide">
+        <label for="divide">A/B</label><br>
+        <br><br>
+
+        <button type="button" id="calculate">Számol</button>
+        <br><br>
+
+        <label for="result">Eredmény:</label>
+        <input type="text" id="result" name="result" readonly>
+    </form>
+</body>
+</html>

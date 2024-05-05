@@ -1,0 +1,23 @@
+<!Doctype HTML>
+
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>JSON Text konvertálása JavaScript objektummá!</title>
+        
+    </head>
+
+    <body>
+        <p id="test"></p>
+
+        <script>
+            let text = '{ "employees" : [' +
+            '{ "nev":"KIT" , "iranyitoszam":3705 , "varos":"Berente","egyetem":"ME" }'+' ]}';
+    
+            let obj = JSON.parse(text);
+            document.getElementById("test").innerHTML = obj.employees[0].nev + " " + obj.employees[0].iranyitoszam + " " + obj.employees[0].varos + " " + obj.employees[0].egyetem;
+        </script>
+    </body>
+
+</html>

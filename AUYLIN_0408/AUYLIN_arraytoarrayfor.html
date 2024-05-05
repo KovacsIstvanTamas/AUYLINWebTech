@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tömbökön belüli tömbök ciklusa!
+    </h1>
+    <p id="test"></p>
+    <script>
+        KITObj = {
+            "name": "KIT",
+            "age": 22,
+            "cars": [
+                {"name": "Toyota", "models": ["CHR", "Corolla", "Proace"]},
+                {"name": "Ford",  "models": ["Kuga", "Mondeo", "Mustang"]},
+                {"name": "BMW",   "models": ["320",  "X3",     "X5"]},
+                {"name": "Fiat",  "models": ["500",  "Panda",  "Tipo"]}
+            ]
+        }
+        document.getElementById("test").innerHTML =KITObj.name +" ;"+KITObj.age;
+        for (var i = 0;i<KITObj.cars.length;i++) {
+            document.getElementById("test").innerHTML +="<br><h3>"+KITObj.cars[i].name+";</h3>  models: ";
+            for (var j = 0;j<KITObj.cars[i].models.length;j++) {
+            document.getElementById("test").innerHTML += KITObj.cars[i].models[j]+" ; ";
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>

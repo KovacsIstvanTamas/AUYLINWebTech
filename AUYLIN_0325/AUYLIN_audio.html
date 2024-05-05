@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            
+            padding: 20px;
+            font-size: 35px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>Audió-zene,hang-lejátszása_AUYLIN</header>
+    <br><br><br><br>
+
+    <audio id="myVideo" width="320" height="240" controls>
+        <source src="videok/jazzy.mp3" type="audio/mpeg">
+        
+        Your browser does not support the video tag.
+    </audio>
+    <audio id="positiveSound" src="videok/yes.mp3"></audio>
+    <audio id="negativeSound" src="videok/no.mp3"></audio>
+    <br><br>
+    <br><br>
+    <button onclick="play()">Play</button>
+    <button onclick="pause()">Pause</button>     
+    <button onclick="playPause()">Play/Pause</button>    
+    <button onclick="pozitiv()">Pozitív</button>
+    <button onclick="negativ()">Negatív</button>
+    <br><br>
+    <button onclick="mute()">néma</button>
+    <button onclick="unmute()">kinémítás</button>
+    <button onclick="halk()">Halk</button>
+    <button onclick="hangos()">Hangos</button>     
+    <button onclick="nagyon_lassu()">nagyonlassu</button>
+    <button onclick="lassu()">lassu</button>
+    <button onclick="normalsebb()">normál</button>
+    <button onclick="gyors()">gyors</button>
+    <button onclick="nagyon_gyors()">nagyon gyors</button>
+    <br><br>   
+    <button onclick="befejez()">befejeződött-e</button>
+    <button onclick="videohossza()">videó hossza(mp)</button>
+    <button onclick="videojelenleg()">videó jelenlegi hossza</button>
+    <button onclick="ugrasmasfel()">ugrás másfél perchez</button>
+    
+    <hr>
+    <br><br>
+    <footer>
+        Forrás: <br>
+        <a href="https://www.w3schools.com/html/html5_audio.asp" target="_blank">https://www.w3schools.com/html/html5_audio.asp</a>
+
+    </footer>
+    <script>
+        var myVideo = document.getElementById("myVideo");
+        var pozitivsound = document.getElementById("positiveSound");
+        var negativeSound = document.getElementById("negativeSound");
+        function ugrasmasfel() { 
+            myVideo.currentTime=90;
+        }
+        function pozitiv(){
+            pozitivsound.play();
+        }
+        function negativ(){
+            negativeSound.play();
+        }
+        function playPause() {
+            if (myVideo.paused) {
+                myVideo.play();
+               
+            } else {
+                myVideo.pause();
+               
+            }
+        };
+        function play() {
+            myVideo.play();
+        };
+        function pause() {
+            myVideo.pause();
+        };
+        
+          function mute(){
+              myVideo.muted = true;
+          }
+          function unmute(){
+              myVideo.muted = false;
+          }
+          function halk(){
+            myVideo.volume = 0.5;
+          }
+          function hangos(){
+            myVideo.volume = 1;
+          }
+          function nagyon_lassu()
+          {
+            myVideo.playbackRate = 0.5;
+          }
+          function lassu()
+          {
+            myVideo.playbackRate = 0.75;
+          }
+          function normalsebb()
+          {
+            myVideo.playbackRate = 1;
+          }
+          function nagyon_gyors(){
+            myVideo.playbackRate = 1.5;
+          }
+          function gyors()
+          {
+            myVideo.playbackRate = 1.25;
+          }
+          function videohossza()
+          {
+            alert(myVideo.duration);
+          }
+          function videojelenleg()
+          {
+            alert(myVideo.currentTime);
+          }
+          function befejez()
+          {
+            if (myVideo.ended){
+              alert("A videó befejeződött");
+            }
+            else {
+              alert("A videó nem fejeződött be");
+            
+            }
+          }
+    </script>
+</body>
+</html>

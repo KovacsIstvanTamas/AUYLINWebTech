@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="KKCanvas" width="700" height="350" style="border:1px solid #000000;">
+        <h2>Mérnökinformatika 2024</h2>
+
+    </canvas>
+    <script>
+            var c = document.getElementById("KKCanvas");
+            var ctx = c.getContext("2d");
+            
+            ctx.font = "30px Arial";
+            ctx.fillStyle="orange";
+            ctx.fillText("Mérnökinformatika 2024", 200, 30);
+            
+
+            var grd = ctx.createRadialGradient(175, 87, 10, 200, 100, 75);
+            grd.addColorStop(0, "#ffcc00");
+            grd.addColorStop(0.3, "#6600ff");
+            grd.addColorStop(1, "#33ff33");
+            ctx.fillStyle = grd;
+            ctx.fillRect(100, 60,150, 75);
+            
+            ctx.beginPath();
+            ctx.rect(100, 230, 150, 100);
+            ctx.strokeStyle = "blue";
+            ctx.stroke();
+            
+            ctx.beginPath();
+            ctx.arc(450, 150, 50,Math.PI*0.3, Math.PI*1.5, false);
+            ctx.closePath();
+            ctx.fillStyle = 'yellow';
+            ctx.fill();
+            
+            ctx.beginPath();
+            ctx.arc(450, 150, 50, Math.PI*0.3, Math.PI*1.5, false);
+            ctx.strokeStyle = 'blue';
+            ctx.stroke();
+            
+            var img = new Image();
+            img.src = 'kepek/iit.jpg';
+            img.onload = function() {
+            ctx.drawImage(img, 800, 500, 150, 150, 630, 280, 75, 75);
+            };
+        </script>
+    
+</body>
+</html>

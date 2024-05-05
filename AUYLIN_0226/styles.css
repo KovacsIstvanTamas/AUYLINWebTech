@@ -1,0 +1,9 @@
+body{
+    background-position: center;
+}
+
+.kep{
+    float: left; 
+    margin: 10px;
+    border: 5px solid red;
+}

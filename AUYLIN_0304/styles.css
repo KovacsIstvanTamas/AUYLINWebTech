@@ -1,0 +1,30 @@
+.parent {
+    margin: 10px;
+}
+
+.child {
+    margin: 10px;
+    display: inline-block;
+}
+
+.kek_kokcka{
+    color: blue;
+    list-style: square;
+}
+
+.abc{
+    list-style: upper-alpha;
+}
+
+.roma{
+    list-style: upper-roman;
+}
+
+.desc_list{
+    color: turquoise;
+}
+
+.kep{
+    float: left; 
+    margin: 10px;
+}

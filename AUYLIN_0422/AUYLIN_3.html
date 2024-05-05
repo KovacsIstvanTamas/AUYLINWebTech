@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUYLIN_Web_3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="AUYLIN_3.js" defer></script>
+    <style>
+        #box {
+            width: 200px;
+            height: 150px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 12pt;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="szoveg">Szöveg hozzáadása</button>
+    <button id="gomb">Gomb hozzáadása</button>
+    <button id="uj_gomb">Új Gomb felvétele</button>
+    <button id="fejlec">Form Fejléc felvétele</button>
+    <button id="alcim">Alcím felvétele</button>
+    <button id="urlap_fejlec">Űrlap fejléc felvétele</button>
+    
+    
+    <div id="box">ME GEIK – KK
+        <p style="font-size: xx-large;"><b>........ </b></p>
+    </div>
+    <br><br>
+    <form>
+        <h1 id="form_fejlec"></h1>
+        <label for="name">Név:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email">
+        <br><br>
+        <label for="email">Jelszó:</label>
+        <input type="password" id="jelszo" name="jelszo">
+        <br><br>
+        <button type="submit">Jelentkezés</button>
+    </form>
+    <br>
+    <br>
+    <p>Forrás: <a href="https://www.tutorialspoint.com/jquery/index.htm" target="_blank" id="link">https://www.tutorialspoint.com/jquery/index.htm</a></p>
+    <p id="gombbeilleszt"></p>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étel értékelése</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-inline .form-check {
+            display: inline-block;
+        }
+        html, body {
+            height: 1300px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Étel értékelése</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Főoldal</a></li>
+                    <li><a href="receptek.html">Receptek</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <section class="container">
+        <h2>Értékelés</h2>
+        <p>Értékeld az alábbi ételt:<span id="etel-nev"></span></p>
+        <form id="rating-form">
+        <ol>
+            <li>
+                <div class="form-group">
+                    <label for="finom">Mennyire finom?</label>
+                    <input type="range" class="form-control-range" id="finom" name="finom" min="1" max="5" value="3">
+                </div>
+            </li>
+            <li>
+                <div class="form-group">
+                    <label for="elkeszitheto">Elkészíthetőség:</label>
+                    <input type="range" class="form-control-range" id="elkeszitheto" name="elkeszitheto" min="1" max="5" value="3">
+                </div>
+            </li>
+            <li>
+                <div class="form-group">
+                    <label for="dragasag">Drágaság:</label>
+                    <input type="range" class="form-control-range" id="dragasag" name="dragasag" min="1" max="5" value="3">
+                </div>
+            </li>
+            <li>
+                <div class="form-group">
+                    <label for="megjegyzes">Megjegyzés (max. 1000 karakter):</label>
+                    <textarea id="megjegyzes" name="megjegyzes" rows="4" maxlength="1000" oninput="validateTextarea(this)"></textarea>
+                    <div id="megjegyzes-error" style="color: red;"></div>
+                    Kérjük ügyeljen:
+                    <ul>
+                        <li>
+                            Ne használjon speciális karaktereket(@&#)
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <label>Egyébb kérdések:</label>
+                <label for="extra1">elkészítené megint?</label>
+                <input type="checkbox" id="extra1" name="extra1">
+            </li>
+            <li>
+                <div class="form-group">
+                    <label for="datum">Mikor készítetted el az ételt?</label>
+                    <input type="date" class="form-control" id="datum" name="datum">
+                </div>
+            </li>
+            <li>
+                <div class="form-group">
+                    <label for="kedvenc-szin">Milyen a kedvenc ételed színe?</label>
+                    <input type="color" class="form-control" id="kedvenc-szin" name="kedvenc-szin">
+                </div>
+            </li>
+            <label>Ajánlaná</label>
+            <li class="form-inline">
+                <div class="form-check ml-3">
+                    <input class="form-check-input" type="radio" name="ajanlana" id="ajanlana-igen" value="igen">
+                    <label class="form-check-label" for="ajanlana-igen">Igen</label>
+                </div>
+                <div class="form-check ml-3">
+                    <input class="form-check-input" type="radio" name="ajanlana" id="ajanlana-nem" value="nem">
+                    <label class="form-check-label" for="ajanlana-nem">Nem</label>
+                </div>
+            </li>
+        </ol>
+        <button type="submit" id="save-ratings-btn">Értékelés elküldése</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Online Receptgyűjtemény</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var etel = getUrlParameter('etel');
+            $('#etel-nev').text(etel);
+        });
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        };
+    </script>
+    <script src="rate.js"></script>
+
+</body>
+</html>
