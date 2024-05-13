@@ -1,110 +1,123 @@
-{
-    "hét": {
-      "hétfő": [
-        {
-          "név": "WebTech",
-          "tanár": "Dr. Agárdi Anita",
-          "tol": "8:00",
-          "ig": "10:00",
-          "terem": "X. Előadó"
-        },
-        {
-          "név": "SwengGyak",
-          "tanár": "Dr. Tompa Tamás",
-          "tol": "10:00",
-          "ig": "12:00",
-          "terem": "201"
-        },
-        {
-            "név": "Fizika",
-            "tanár": "Pszota Gábor",
-            "tol": "12:00",
-            "ig": "14:00",
-            "terem": "XXX. Előadó"
-        },
-        {
-            "név": "WebTechGyak",
-            "tanár": "Dr. Bednarik László",
-            "tol": "14:00",
-            "ig": "16:00",
-            "terem": "inf/103"
-        },
-        {
-            "név": "AdatB2Gyak",
-            "tanár": "Dr. Bednarik László",
-            "tol": "16:00",
-            "ig": "18:00",
-            "terem": "inf/112"
-        }
-      ],
-      "kedd": [
-        {
-            "név": "C#",
-            "tanár": "Smid László",
-            "tol": "10:00",
-            "ig": "12:00",
-            "terem": "inf/202"
-        },
-        {
-            "név": "Numerikus Analízis",
-            "tanár": "Dr. Földvári Attila József",
-            "tol": "12:00",
-            "ig": "14:00",
-            "terem": "XXXII. Előadó"
-        },
-        {
-            "név": "Fizika Gyak",
-            "tanár": "Dr. Paripás Béla",
-            "tol": "14:00",
-            "ig": "16:00",
-            "terem": "304"
-        },
-        {
-            "név": "Numerikus Analízis",
-            "tanár": "Vadon Viktória",
-            "tol": "16:00",
-            "ig": "18:00",
-            "terem": "204"
-        }
-      ],
-      "szerda": [
-        {
-            "név": "Sweng",
-            "tanár": "Dr. Tompa Tamás",
-            "tol": "8:00",
-            "ig": "9:00",
-            "terem": "XXX. Előadó"
-        },
-        {
-            "név": "AdatB2",
-            "tanár": "Dr. Kovács László József",
-            "tol": "10:00",
-            "ig": "12:00",
-            "terem": "204"
-        },
-        {
-            "név": "BizVéd",
-            "tanár": "Wagner György",
-            "tol": "12:00",
-            "ig": "14:00",
-            "terem": "XXXII. Előadó"
-        }
-      ],
-      "csütörtök": [
-        {
-            "név": "BizVédGyak",
-            "tanár": "Wagner György",
-            "tol": "8:00",
-            "ig": "10:00",
-            "terem": "inf/103"
-        },
-        {
-            "név": "C#Gyak",
-            "tanár": "Smid László",
-            "tol": "10:00",
-            "ig": "12:00",
-            "terem": "inf/202"
-        }
+[
+  {
+      "kurzusnev":"Web technologia alapjai",
+      "oktato":"Agárdi Anita",
+      "szak":"MI",
+      "idopont":
+      {
+          "nap":"Hétfő",
+          "tol":"8:00",
+          "ig":"10:00"
+      },
+      "helyszin":"X A1 II. em. 218-",
+      "cim":
+      {
+          "street":"Egyetemváros",
+          "city":"Miskolc",
+          "code":"1021"
+      },
+      "phone number":
+      [
+          {
+              "type":"Vezetékes",
+              "number":"0642042069"
+          },
+          {
+              "type":"Mobil",
+              "number":"06424242424"
+          }
       ]
-    }
+  },
+
+  {
+
+  "kurzusnev":"Szoftvertechnológia gyako",
+      "oktato":"Dr.Tompa Tamás",
+      "szak":"MI",
+      "idopont":
+      {
+          "nap":"Hétfő",
+          "tol":"10:00",
+          "ig":"12:00"
+      },
+      "helyszin":"X A1 II. em. 202-",
+      "cim":
+      {
+          "street":"Egyetemváros",
+          "city":"Miskolc",
+          "code":"1021"
+      },
+      "phone number":
+      [
+          {
+              "type":"Vezetékes",
+              "number":"0642042069"
+          },
+          {
+              "type":"Mobil",
+              "number":"06424242424"
+          }
+      ]
+      
+      
+  },
+  {
+      "kurzusnev":"Adatbázis rendszerek II.",
+      "oktato":"Agárdi Anita",
+      "szak":"MI",
+      "idopont":
+      {
+          "nap":"Hétfő",
+          "tol":"8:00",
+          "ig":"10:00"
+      },
+      "helyszin":"X A1 II. em. 218-",
+      "cim":
+      {
+          "street":"Egyetemváros",
+          "city":"Miskolc",
+          "code":"1021"
+      },
+      "phone number":
+      [
+          {
+              "type":"Vezetékes",
+              "number":"0642042069"
+          },
+          {
+              "type":"Mobil",
+              "number":"06424242424"
+          }
+      ]
+  },
+  {
+      "kurzusnev":"Szoftvertechnológia gyako",
+      "oktato":"Mészáros Gergely",
+      "szak":"MI",
+      "idopont":
+      {
+          "nap":"Hétfő",
+          "tol":"16:00",
+          "ig":"18:00"
+      },
+      "helyszin":"C1/202A C1 II. em. 202A",
+      "cim":
+      {
+          "street":"Egyetemváros",
+          "city":"Miskolc",
+          "code":"1021"
+      },
+      "phone number":
+      [
+          {
+              "type":"Vezetékes",
+              "number":"0642042069"
+          },
+          {
+              "type":"Mobil",
+              "number":"06424242424"
+          }
+      ]
   }
+]
+

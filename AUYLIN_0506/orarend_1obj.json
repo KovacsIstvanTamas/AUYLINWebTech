@@ -1,0 +1,29 @@
+{
+    "kurzusnev":"Web technologia alapjai",
+    "oktato":"Agárdi Anita",
+    "szak":"MI",
+    "idopont":
+    {
+        "nap":"Hétfő",
+        "tol":"8:00",
+        "ig":"10:00"
+    },
+    "helyszin":"X A1 II. em. 218-",
+    "cim":
+    {
+        "street":"Egyetemváros",
+        "city":"Miskolc",
+        "code":"1021"
+    },
+    "phone number":
+    [
+        {
+            "type":"Vezetékes",
+            "number":"0648321456"
+        },
+        {
+            "type":"Mobil",
+            "number":"06201237897"
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jqueryfeladat4</title>
+    <script src="JQuery.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="AUYLIN_4.js" defer></script>
+    <style>
+        #box {
+            width: 200px;
+            height: 150px;
+            background-color: #0055af;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 12pt;
+            position: relative;
+        }
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="szoveg">Szöveg hozzáadása</button>
+    <button id="gomb">Gomb hozzáadása</button>
+    <button id="uj_gomb">Új Gomb felvétele</button>
+    <button id="fejlec">Form Fejléc felvétele</button>
+    <button id="alcim">Alcím felvétele</button>
+    <button id="urlap_fejlec">Űrlap fejléc felvétele</button>
+
+    <div id="box">ME GEIK – KK
+        <p style="font-size: xx-large;"><b>........ </b></p>
+    </div>
+    <br><br>
+    <form id="form1">
+        <h1 id="form_fejlec"></h1>
+        <label for="name">Név:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        <label for="email">E-mail:</label>
+        <input type="text" id="email" name="email">
+        <br><br>
+        <label for="email">Jelszó:</label>
+        <input type="password" id="jelszo" name="jelszo">
+        <br><br>
+        <button type="submit">Jelentkezés</button>
+    </form>
+    <br>
+    <br>
+    <p>Forrás: <a href="https://www.tutorialspoint.com/jquery/index.htm" target="_blank" id="link">https://www.tutorialspoint.com/jquery/index.htm</a></p>
+    <p id="gombbeilleszt"></p>
+
+    <hr>
+
+    <p><b>Adjon meg két egész számot</b></p>
+    <form id="calculator">
+
+        <label for="num1">Egyik=</label>
+        <input type="number" id="num1" name="num1" required style="background-color: aqua;">
+        <br><br>
+
+        <label for="num2">Másik=</label>
+        <input type="number" id="num2" name="num2" required style="background-color: aqua;">
+        <br><br>
+
+        <label>Operátor:</label><br>
+
+        <input type="radio" id="add" name="operator" value="add" required>
+        <label for="add">Egyik+Másik</label><br>
+
+        <input type="radio" id="subtract" name="operator" value="subtract">
+        <label for="subtract">Egyik-Másik</label><br>
+
+        <input type="radio" id="multiply" name="operator" value="multiply">
+        <label for="multiply">Egyik*Másik</label><br>
+
+        <input type="radio" id="divide" name="operator" value="divide">
+        <label for="divide">Egyik/Másik</label><br>
+        <br><br>
+
+        <button type="button" id="calculate">Számol</button>
+        <br><br>
+
+        <label for="result">Eredmény:</label>
+        <input type="text" id="result" name="result" readonly>
+    </form>
+</body>
+</html>
