@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videók</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Online Receptgyűjtemény</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="receptek.html">Receptek</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section>
+        <h2 style="text-align: center;">Videó bemutató</h2>
+        <p style="text-align: center;">Itt található egy rövid videó az étel Elkészítéséről</p>
+        <video id="videoPlayer" controls style="height: 40%; width: 40%; display: block; margin: 0 auto;">
+            A böngésző nem támogatja a videót.
+        </video>
+        <div style="text-align: center; margin-top: 10px;">
+            <button onclick="playPause()">Lejátszás/Megállítás</button>
+            <button onclick="muteUnmute()">Némítás/Hang</button>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" onchange="changeVolume()">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Online Receptgyűjtemény</p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            var etel = getUrlParameter('etel');
+            var videoPlayer = document.getElementById('videoPlayer');
+
+            if (etel) {
+                var videoSource = "video/" + etel.replace(/ /g, "_") + ".mp4";
+
+                videoPlayer.src = videoSource;
+
+                videoPlayer.play();
+            }
+
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            };
+        }
+        
+
+        var videoPlayer = document.getElementById('videoPlayer');
+        var volumeControl = document.getElementById('volumeControl');
+
+        function playPause() {
+            if (videoPlayer.paused) {
+                videoPlayer.play();
+            } else {
+                videoPlayer.pause();
+            }
+        }
+
+        function muteUnmute() {
+            if (videoPlayer.muted) {
+                videoPlayer.muted = false;
+            } else {
+                videoPlayer.muted = true;
+            }
+        }
+
+        function changeVolume() {
+            videoPlayer.volume = volumeControl.value;
+        }
+    </script>
+</body>
+</html>
