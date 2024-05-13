@@ -62,16 +62,16 @@
       
   },
   {
-      "kurzusnev":"Adatbázis rendszerek II.",
-      "oktato":"Agárdi Anita",
+      "kurzusnev":"Fizika",
+      "oktato":"Pszota Gábor",
       "szak":"MI",
       "idopont":
       {
           "nap":"Hétfő",
-          "tol":"8:00",
-          "ig":"10:00"
+          "tol":"12:00",
+          "ig":"14:00"
       },
-      "helyszin":"X A1 II. em. 218-",
+      "helyszin":"X A1 III. em. XXX.E",
       "cim":
       {
           "street":"Egyetemváros",
@@ -91,7 +91,36 @@
       ]
   },
   {
-      "kurzusnev":"Szoftvertechnológia gyako",
+    "kurzusnev":"Web technologia alapjai Gyak",
+    "oktato":"Dr. Bednarik László",
+    "szak":"MI",
+    "idopont":
+    {
+        "nap":"Hétfő",
+        "tol":"14:00",
+        "ig":"16:00"
+    },
+    "helyszin":"C1/103A C1 I. em. 103A",
+    "cim":
+    {
+        "street":"Egyetemváros",
+        "city":"Miskolc",
+        "code":"1021"
+    },
+    "phone number":
+    [
+        {
+            "type":"Vezetékes",
+            "number":"0642042069"
+        },
+        {
+            "type":"Mobil",
+            "number":"06424242424"
+        }
+    ]
+},
+  {
+      "kurzusnev":"Adatbázis rendszerek II.",
       "oktato":"Mészáros Gergely",
       "szak":"MI",
       "idopont":
